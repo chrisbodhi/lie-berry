@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Where the Lies Are Buried</title>
+        </head>
+        <body>
+          <button>Where the Lies Are Buried</button>
+            <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+            <script type="text/javascript">
+              $('button').on('click', function () {
+                navigator.geolocation.getCurrentPosition(
+                  function(position) {
+                    alert("You were last spotted at (" + position.coords.latitude + "," + position.coords.longitude + ")");
+                    var lat1 = position.coords.latitude.toString().replace('.', 'x');
+                    var long1 = position.coords.longitude.toString().replace('.', 'x');
+                });
+              });
+
+            </script>
+        </body>
+    </html>
+
+    <!-- $.get -->
+    <!-- google maps api -->
+    <!-- parse the json -->
